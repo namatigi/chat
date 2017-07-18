@@ -20,6 +20,22 @@ class Employee:
         self.pay = int(self.pay * self.raise_amt)
 
 
+    def __repr__(self):
+        return "Employee('{}','{}','{}')".format(self.first,self.last,self.pay)
+
+    def __str__(self):
+        #  pass
+        return '{} - {}'.format(self.fullname(),self.email)
+
+
+    def __add__(self,other):
+        return self.pay + other.pay
+
+
+    def __len__(self):
+        return len(self.fullname())
+
+
 
 class Developer(Employee):
     raise_amt = 1.10
@@ -56,10 +72,32 @@ class Manager(Employee):
             print('--->',emp.fullname())
 
 
-dev1 = Developer('Leonard','Mangu',100000,'C++')
+dev1 = Employee('Leonard','Mangu',100000)
 
-dev2 = Developer('Ombeni','Aidani',200000,'PHP')
+dev2 = Employee('Ombeni','Aidani',200000)
+
+
+# print(1+2)
 #
+# print(int.__add__(1,2))
+
+# print(dev1 + dev2)
+
+print(len('LEONARD'))
+
+print('TEST'.__len__())
+
+print(len(dev1))
+
+# print(str.__add__('a','b'))
+# print(dev1)
+
+# print(repr(dev1))
+# print(str(dev1))
+#
+# print(dev1.__str__())
+# print(dev1.__repr__())
+# #
 # print(help(Developer))
 
 # print(dev1.pay)
@@ -71,7 +109,7 @@ dev2 = Developer('Ombeni','Aidani',200000,'PHP')
 # print(dev1.prog_lang)
 # print(dev2.prog_lang)
 
-mgr1 = Manager('Leonard','Smith',900000,[dev1])
+# mgr1 = Manager('Leonard','Smith',900000,[dev1])
 
 
 #
@@ -85,6 +123,6 @@ mgr1 = Manager('Leonard','Smith',900000,[dev1])
 
 
 
-print(issubclass(Manager,Employee))
-
-print(isinstance(mgr1,Developer))
+# print(issubclass(Manager,Employee))
+#
+# print(isinstance(mgr1,Developer))
