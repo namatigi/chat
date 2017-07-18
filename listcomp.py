@@ -46,6 +46,13 @@ nums= [1,2,3,4,5,6]
 #
 # print mylist
 
-mylist = [(letter,num) for letter in 'ABCD' for num in range(4)]
+# mylist = [(letter,num) for letter in 'ABCD' for num in range(4)]
+#
+# print mylist
 
-print mylist
+
+#DICTIONARY COMPREHENSIONS
+names = ['Bruce','Clark','Peter','Mangu','Paul']
+heros = ['BATMAN','SUPERMAN','SPIDERMAN','WOLVERINE','DEADPOOL']
+
+print zip(names,heros)
