@@ -52,7 +52,34 @@ nums= [1,2,3,4,5,6]
 
 
 #DICTIONARY COMPREHENSIONS
-names = ['Bruce','Clark','Peter','Mangu','Paul']
-heros = ['BATMAN','SUPERMAN','SPIDERMAN','WOLVERINE','DEADPOOL']
+# names = ['Bruce','Clark','Peter','Mangu','Paul']
+# heros = ['BATMAN','SUPERMAN','SPIDERMAN','WOLVERINE','DEADPOOL']
+#
+# print zip(names,heros)
+#
+#
+# my_dict = {}
+#
+# for name,hero in zip(names,heros):
+#     my_dict[name] = hero
+#
+# print my_dict
+#
+#
+# my_dict = {name:hero for name,hero in zip(names,heros) if name !='Peter'}
+#
+# print my_dict
 
-print zip(names,heros)
+nums = [1,2,1,3,4,2,4,5,6,7,7,7,8,9,4,5]
+
+my_set =set()
+
+for n in nums:
+    my_set.add(n)
+
+print my_set
+
+
+my_set = {n for n in nums}
+
+print my_set
