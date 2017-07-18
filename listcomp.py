@@ -30,10 +30,22 @@ nums= [1,2,3,4,5,6]
 #         mylist.append(n)
 # print mylist
 
-mylist = [ n for n in nums if n%2==0]
+# mylist = [ n for n in nums if n%2==0]
+#
+# print mylist
+#
+# mylist = filter(lambda n:n%2==0,nums)
+#
+# print mylist
 
-print mylist
+# mylist = []
+#
+# for letter in 'abcd':
+#     for num in range(4):
+#         mylist.append((letter,num))
+#
+# print mylist
 
-mylist = filter(lambda n:n%2==0,nums)
+mylist = [(letter,num) for letter in 'ABCD' for num in range(4)]
 
 print mylist
