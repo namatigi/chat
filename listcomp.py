@@ -78,8 +78,3 @@ for n in nums:
     my_set.add(n)
 
 print my_set
-
-
-my_set = {n for n in nums}
-
-print my_set
